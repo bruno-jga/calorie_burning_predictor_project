@@ -1,6 +1,6 @@
 # Calorie Burning Predictor
 
-This is a simple web application that predicts the number of calories burned based on the user's age, weight, duration of exercise, heart rate, gender, etc. The application uses a machine learning model trained on a dataset of exercise data obtained from Kaggle (https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
+This is a simple web application that predicts the number of calories burned on gym exercise based on the user's age, weight, duration of exercise, heart rate, gender, etc. The application uses a machine learning model trained on a dataset of exercise data obtained from Kaggle (https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
 
 The objective of this project was to learn how to use new tools like docker and learn how to create a web application using flask. 
 
@@ -29,3 +29,9 @@ Then run the following command, to run the container:
 
 ## 4. Test the application
 
+The process of obtaining the prediction is simple and not fancy. I have a test_predict.py file that contains a URL (localhost) and "physical activity" dictionary that contains the values for the input variables. First we edit the variables then we run the program:
+
+```python test_predict.py```	
+
+And a prediction like this is returned:
+{'Prediction of calories burned': 705.4508666992188}
