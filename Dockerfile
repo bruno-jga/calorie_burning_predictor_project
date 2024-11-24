@@ -7,5 +7,11 @@ COPY ["Pipfile", "Pipfile.lock", "./"]
 
 RUN pipenv install --system --deploy
 
+COPY ["predict.py", "xgboost_final_model.bin",  "./"]
+
+EXPOSE 9696
+
+ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "predict:app"]
+
 
 
